@@ -1,7 +1,6 @@
 import React from 'react'
 import { View, Text, TouchableHighlight, Image } from 'react-native'
 import styles from './Styles/TickerStyle'
-import images from '../Themes/Images'
 
 export default class Ticker extends React.Component {
 
@@ -9,20 +8,37 @@ export default class Ticker extends React.Component {
   static propTypes = {
     label: React.PropTypes.string.isRequired,
     isSelected: React.PropTypes.bool,
-    onPress: React.PropTypes.func.isRequired
+    onPress: React.PropTypes.func.isRequired,
+      labelStyle: React.PropTypes.object,
+      tickImage: React.PropTypes.any,
+      tickImageStyle: React.PropTypes.any,
+      checkedLabelStyle: React.PropTypes.any,
+      tickContainerStyle: React.PropTypes.any
   }
 
   // Defaults for props
   static defaultProps = {
-    isSelected: false
+    isSelected: false,
+      tickImage: require("./tick.png")
   }
 
   render () {
+      const {tickImage, labelStyle, checkedLabelStyle, tickImageStyle, tickContainerStyle} = this.props;
+
     return (
-      <TouchableHighlight underlayColor={'rgba(0,0,0,0)'} style={styles.container} onPress={this.props.onPress}>
+      <TouchableHighlight underlayColor={'rgba(0,0,0,0)'} style={[styles.container, tickContainerStyle]} onPress={this.props.onPress}>
         <View style={styles.container}>
-          <Text id="label" style={[styles.label, this.props.isSelected?styles.tickedText:null]}>{this.props.label}</Text>
-          {this.props.isSelected && <Image style={styles.tick} source={images.tick}/>}
+          <Text
+              id="label"
+              style={[styles.label, labelStyle, this.props.isSelected?styles.tickedText:null, this.props.isSelected&&checkedLabelStyle?checkedLabelStyle:null]}
+          >
+
+              {this.props.label}
+
+              </Text>
+
+            {this.props.isSelected && <Image style={[styles.tick, tickImageStyle]} source={tickImage}/>}
+
         </View>
       </TouchableHighlight>
     )

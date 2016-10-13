@@ -21,7 +21,7 @@ export default class example extends Component {
       var {height, width} = Dimensions.get('window');
 
     return (
-        <Image source={require("./components/background.png")} style={{resizeMode: "cover", width: width}}>
+        <Image source={require("./background.png")} style={{resizeMode: "cover", width: width}}>
               <View style={{paddingTop: 20}}>
               <Text>Picker Test</Text>
                   <Selector title="Pick your language"
