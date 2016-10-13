@@ -1,0 +1,23 @@
+{
+  "name": "react-native-item-picker",
+  "version": "0.0.1",
+  "description": "React Native Picker Component",
+  "main": "components/Selector.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BipinBhandari/react-native-item-picker.git"
+  },
+  "keywords": [
+    "react-native",
+    "picker"
+  ],
+  "author": "Bipin Bhandari",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BipinBhandari/react-native-item-picker/issues"
+  },
+  "homepage": "https://github.com/BipinBhandari/react-native-item-picker#readme"
+}
