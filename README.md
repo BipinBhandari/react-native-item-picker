@@ -12,6 +12,9 @@ Picker component for react-native applications
 npm i react-native-item-picker
 ```
 
+###Preview
+![Screenshot](https://raw.githubusercontent.com/BipinBhandari/react-native-item-picker/master/Screen%20Shot%202016-10-14%20at%205.38.34%20PM.png "Screenshot")
+
 ### Usage:
 ```
 import Selector from "react-native-item-picker"
