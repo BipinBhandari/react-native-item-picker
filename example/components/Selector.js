@@ -35,8 +35,6 @@ export default class Selector extends React.Component {
   }
 
   onPress = (item) => {
-      console.log(item)
-
       this.setState({
           collection: this.state.collection.map(i => {
               if (i.id==item.id){
@@ -63,6 +61,8 @@ export default class Selector extends React.Component {
           this.props.collection.map(
               (item, i)=>
                   <Ticker
+                      {...this.props}
+
                       key={i}
                       label={item[this.props.titleField]||"undefined"}
                       isSelected={item._isSelected}

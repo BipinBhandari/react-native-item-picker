@@ -14,6 +14,7 @@ import {
 Dimensions
 } from 'react-native';
 
+// import Selector from "react-native-item-picker"
 import Selector from "./components/Selector"
 
 export default class example extends Component {
@@ -22,16 +23,23 @@ export default class example extends Component {
 
     return (
         <Image source={require("./background.png")} style={{resizeMode: "cover", width: width}}>
-              <View style={{paddingTop: 20}}>
-              <Text>Picker Test</Text>
-                  <Selector title="Pick your language"
-                            multiSelect={false}
-                  collection={[
-                      {id: 1, name: "Item 1"},
-                      {id: 2, name: "Item 2"},
-                      {id: 3, name: "Item 3"},
-                      {id: 4, name: "Item 4"},
-                  ]}
+              <View style={{paddingTop: 80}}>
+              
+                  <Selector 
+                        title="Pick your language"
+                        multiSelect={false}
+
+                        titleStyle={{
+                          backgroundColor: "transparent"
+                        }}
+
+                        collection={[
+                            {id: 1, name: "Nepali"},
+                            {id: 2, name: "English"},
+                            {id: 3, name: "Hindi"},
+                            {id: 4, name: "Other"},
+                        ]}
+                        selectedIndex={1}
                   />
               </View>
         </Image>
