@@ -14,8 +14,8 @@ import {
 Dimensions
 } from 'react-native';
 
-// import Selector from "react-native-item-picker"
-import Selector from "./components/Selector"
+import Selector from "react-native-item-picker"
+// import Selector from "./components/Selector"
 
 export default class example extends Component {
   render() {
