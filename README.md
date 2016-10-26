@@ -13,7 +13,7 @@ npm i react-native-item-picker
 ```
 
 ###Preview
-![Screenshot](https://raw.githubusercontent.com/BipinBhandari/react-native-item-picker/master/Screen%20Shot%202016-10-14%20at%205.38.34%20PM.png "Screenshot")
+![Demo](https://raw.githubusercontent.com/BipinBhandari/react-native-item-picker/master/demo.gif "Demo")
 
 ### Usage:
 ```
@@ -60,6 +60,12 @@ import Selector from "react-native-item-picker"
  * style
  * selectedIndex: selected index (should be int)
  * multiSelect: boolean
-
+ 
+#### Props for ticker item
+ * itemLabelStyle: React.PropTypes.object,
+ * itemTickImage: React.PropTypes.any,
+ * itemTickImageStyle: React.PropTypes.any,
+ * itemCheckedLabelStyle: React.PropTypes.any,
+ * itemTickContainerStyle: React.PropTypes.any
 
 Issues are here -> https://github.com/BipinBhandari/react-native-item-picker/issues
